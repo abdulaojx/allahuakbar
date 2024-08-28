@@ -1,7 +1,6 @@
-const { Client, GatewayIntentBits } = require('discord.js');
-require('dotenv').config(); // Carica le variabili d'ambiente da .env
+const { Client, GatewayIntentBits, EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder } = require('discord.js');
 
-// Usa il token dal file .env
+// Utilizza il token dall'ambiente su Render
 const token = process.env.TOKEN;
 
 const client = new Client({
