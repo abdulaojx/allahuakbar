@@ -1,7 +1,8 @@
 const { Client, GatewayIntentBits } = require('discord.js');
+require('dotenv').config(); // Carica le variabili d'ambiente da .env
 
-// Inserisci il token del bot direttamente qui
-const token = 'YOUR_BOT_TOKEN';
+// Usa il token dal file .env
+const token = process.env.TOKEN;
 
 const client = new Client({
     intents: [
@@ -187,3 +188,4 @@ client.on('messageReactionAdd', (reaction, user) => {
 });
 
 client.login(token);
+            
